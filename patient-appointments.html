@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <meta name="description" content="An independent patient appointment scheduling concept by Ajay Simha M.">
+  <title>Daywell — Patient appointment concept by Ajay Simha M</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f4f3ed;--white:#fffefa;--ink:#1c2722;--muted:#64716a;--line:#d8ddd3;--green:#315f4b;--mint:#d8e8d9;--coral:#d86e55;--gold:#e4c977;--serif:"DM Serif Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--mono:"DM Mono",monospace}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55}button,a{font:inherit}a{color:inherit;text-decoration:none}button{color:inherit}button:focus-visible,a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.topbar{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.wordmark{font-weight:700;letter-spacing:-.06em;font-size:21px}.wordmark span{color:var(--green)}.toplink{font-size:13px;color:var(--muted)}.intro{padding:54px 0 38px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px}.eyebrow,.mono{font:11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}h1,h2,h3,p{margin-top:0}h1{font:clamp(44px,7vw,74px)/.98 var(--serif);letter-spacing:-.035em;max-width:700px;margin:14px 0 18px}h1 em{color:var(--green);font-weight:400}.intro p{max-width:570px;color:#526058;font-size:17px;margin-bottom:0}.study-stamp{border-left:1px solid var(--line);padding:8px 0 8px 18px;min-width:170px}.study-stamp strong{display:block;font-size:13px}.study-stamp span{font:10px var(--mono);color:var(--muted);letter-spacing:.08em}
+    .demo{background:var(--white);border:1px solid #d9ded6;box-shadow:0 20px 55px #203c2e0b;border-radius:4px;overflow:hidden}.demo-head{min-height:56px;padding:14px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.demo-head strong{font-size:14px}.secure{font:10px var(--mono);letter-spacing:.07em;color:var(--green)}.app{display:grid;grid-template-columns:218px minmax(0,1fr) 258px;min-height:612px}.rail{padding:25px 17px;border-right:1px solid var(--line);background:#faf9f4}.patient{display:flex;align-items:center;gap:10px;padding:4px 2px 23px;border-bottom:1px solid var(--line);font-size:12px}.avatar{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#c6dfd0;color:#264d3d;font-weight:700}.patient small{display:block;color:var(--muted);font-size:10px}.railnav{display:grid;gap:4px;padding-top:18px}.railnav button{border:0;background:transparent;text-align:left;padding:10px 11px;border-radius:3px;color:#59665e;font-size:12px;cursor:pointer}.railnav button.active{background:var(--mint);color:#274b3a;font-weight:700}.rail-note{margin-top:48px;padding:14px 12px;background:#eef3e9;border-left:2px solid var(--green);font-size:11px;color:#46574d}.rail-note b{display:block;margin-bottom:5px;color:var(--ink)}.main{padding:26px 26px 30px;min-width:0}.main-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.main h2{font:30px/1.05 var(--serif);letter-spacing:-.02em;margin:3px 0 8px}.subtle{color:var(--muted);font-size:12px}.search{margin:20px 0 17px;display:grid;grid-template-columns:1fr auto;gap:8px}.search input{min-width:0;border:1px solid var(--line);background:#fffefa;border-radius:3px;padding:12px 13px;font:13px var(--sans)}.search button,.primary{border:0;background:var(--green);color:white;border-radius:3px;padding:11px 15px;font-weight:700;font-size:12px;cursor:pointer}.filters{display:flex;gap:7px;overflow:auto;padding:0 0 15px;border-bottom:1px solid var(--line)}.filter{white-space:nowrap;border:1px solid var(--line);background:transparent;border-radius:100px;padding:7px 11px;font-size:11px;cursor:pointer}.filter[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white}.provider-list{display:grid;gap:10px;padding-top:15px}.provider{display:grid;grid-template-columns:43px minmax(0,1fr) auto;align-items:center;gap:12px;border:1px solid var(--line);padding:12px 12px;background:white;border-radius:3px}.provider[hidden]{display:none}.portrait{height:43px;width:43px;display:grid;place-items:center;background:#e8d5c5;color:#543e31;border-radius:50%;font:16px var(--serif)}.portrait.blue{background:#c8d8de;color:#31535c}.portrait.yellow{background:#eddfb1;color:#564e2a}.provider h3{font-size:13px;margin:0 0 2px}.provider p{font-size:10px;color:var(--muted);margin:0}.provider .rating{font:10px var(--mono);color:#56655d}.provider .select-provider{grid-column:2/4;justify-self:start;padding:6px 9px;border:1px solid var(--line);background:transparent;border-radius:3px;font-size:10px;cursor:pointer}.provider.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}.right{padding:24px 18px;border-left:1px solid var(--line);background:#faf9f4}.right h3{font-size:12px;margin:5px 0 8px}.right .selected-name{font:23px/1.05 var(--serif);margin:6px 0 4px}.calendar{margin-top:18px}.week{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:10px 0 12px}.date{border:1px solid var(--line);background:#fffefa;padding:8px 2px;border-radius:3px;cursor:pointer;text-align:center;font-size:10px}.date b{display:block;font-size:13px}.date[aria-pressed=true]{background:var(--green);color:white;border-color:var(--green)}.slots{display:grid;grid-template-columns:1fr 1fr;gap:6px}.slot{border:1px solid var(--line);background:white;padding:8px 5px;border-radius:3px;font-size:10px;cursor:pointer}.slot[aria-pressed=true]{border-color:var(--coral);background:#fff4ef;color:#803b29;box-shadow:inset 0 0 0 1px var(--coral)}.book{width:100%;margin-top:14px}.book:disabled{opacity:.42;cursor:not-allowed}.hint{font-size:10px;color:var(--muted);margin:9px 0 0}.message{min-height:20px;margin-top:10px;color:var(--green);font-size:11px}.case{padding:76px 0 88px}.case-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding-bottom:30px;border-bottom:1px solid var(--line)}.case-head h2{font:42px/1.02 var(--serif);margin:10px 0 0;max-width:370px}.case-head p{color:#536158;max-width:600px;font-size:16px}.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding-top:25px}.case-grid article{padding-top:12px;border-top:2px solid var(--green)}.case-grid h3{font:22px var(--serif);margin:8px 0}.case-grid p{font-size:13px;color:#5b675f;margin:0}.tokens{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.token{font:10px var(--mono);border:1px solid var(--line);padding:6px 8px;background:#fbfaf5}.footer{border-top:1px solid var(--line);padding:23px 0 34px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px}.footer strong{color:var(--ink)}.return{color:var(--green);font-weight:700}
+    @media(max-width:980px){.app{grid-template-columns:180px minmax(0,1fr)}.right{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1.4fr;gap:18px;align-items:start}.calendar{margin:0}.week{grid-template-columns:repeat(4,1fr)}.rail-note{margin-top:25px}}
+    @media(max-width:650px){.wrap{width:min(100% - 28px,1180px)}.topbar{height:58px}.intro{padding:37px 0 25px;grid-template-columns:1fr}.study-stamp{border-left:0;border-top:1px solid var(--line);padding:12px 0 0;min-width:0}.demo-head{padding:12px 14px}.app{display:flex;flex-direction:column}.rail{border-right:0;border-bottom:1px solid var(--line);padding:13px 13px 9px}.patient{padding:0;border-bottom:0}.railnav{display:flex;overflow:auto;padding:11px 0 0}.railnav button{white-space:nowrap}.rail-note{display:none}.main{padding:21px 14px}.main h2{font-size:27px}.main-top{display:block}.provider{grid-template-columns:38px minmax(0,1fr);gap:9px;padding:10px}.portrait{width:38px;height:38px}.provider .rating{grid-column:2}.provider .select-provider{grid-column:2}.right{display:block;padding:19px 14px}.calendar{margin-top:18px}.case{padding:52px 0 62px}.case-head{grid-template-columns:1fr;gap:13px}.case-head h2{font-size:35px}.case-grid{grid-template-columns:1fr;gap:20px}.footer{flex-direction:column}.secure{max-width:110px;text-align:right}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar"><a class="wordmark" href="https://ajaysimha0107.github.io/ajay-simha-design-engineer-portfolio/" aria-label="Ajay Simha M portfolio home">daywell<span> /</span></a><a class="toplink" href="https://ajaysimha0107.github.io/ajay-simha-design-engineer-portfolio/">← Portfolio home</a></header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="page-title">
+      <div><div class="eyebrow">Independent concept · Healthcare scheduling · 2026</div><h1 id="page-title">A better visit starts <em>before</em> the visit.</h1><p>Daywell is a patient-first appointment concept that makes the next step feel easy to understand: find the right clinician, compare real openings, and leave with a clear confirmation.</p></div>
+      <div class="study-stamp"><strong>Ajay Simha M</strong><span>DESIGN ENGINEER · UX + FRONTEND</span></div>
+    </section>
+    <section class="demo" aria-labelledby="demo-title">
+      <div class="demo-head"><strong id="demo-title">Find a clinician</strong><span class="secure">CONCEPT DATA · PRIVATE BY DEFAULT</span></div>
+      <div class="app">
+        <aside class="rail" aria-label="Patient account">
+          <div class="patient"><div class="avatar" aria-hidden="true">AS</div><div><strong>Welcome, Alex</strong><small>Patient workspace</small></div></div>
+          <nav class="railnav" aria-label="Patient navigation"><button class="active" type="button">Find care</button><button type="button" data-demo-nav>My visits</button><button type="button" data-demo-nav>Messages</button></nav>
+          <div class="rail-note"><b>A little more clarity.</b>See what to expect before you book. Your visit details stay together in one place.</div>
+        </aside>
+        <section class="main" aria-label="Clinician search">
+          <div class="main-top"><div><div class="eyebrow">Your next step</div><h2>Who can help today?</h2><div class="subtle">Choose a clinician and a time that works for you.</div></div></div>
+          <form class="search" id="search-form"><label class="sr-only" for="care-search">Search by clinician or specialty</label><input id="care-search" type="search" placeholder="Name, specialty, or concern" autocomplete="off"><button type="submit">Search</button></form>
+          <div class="filters" role="group" aria-label="Filter clinicians by specialty"><button class="filter" type="button" aria-pressed="true" data-filter="all">All care</button><button class="filter" type="button" aria-pressed="false" data-filter="Primary care">Primary care</button><button class="filter" type="button" aria-pressed="false" data-filter="Dermatology">Dermatology</button><button class="filter" type="button" aria-pressed="false" data-filter="Pediatrics">Pediatrics</button></div>
+          <div class="provider-list" id="providers">
+            <article class="provider selected" data-provider="Lila Anand" data-specialty="Primary care"><div class="portrait">LA</div><div><h3>Dr. Lila Anand</h3><p>Primary care · Family medicine</p></div><span class="rating">4.9 · 1.2 mi</span><button class="select-provider" type="button" aria-pressed="true">Selected clinician</button></article>
+            <article class="provider" data-provider="Marcus Chen" data-specialty="Dermatology"><div class="portrait blue">MC</div><div><h3>Dr. Marcus Chen</h3><p>Dermatology · Skin health</p></div><span class="rating">4.8 · 2.4 mi</span><button class="select-provider" type="button" aria-pressed="false">Choose clinician</button></article>
+            <article class="provider" data-provider="Nora Williams" data-specialty="Pediatrics"><div class="portrait yellow">NW</div><div><h3>Dr. Nora Williams</h3><p>Pediatrics · Family care</p></div><span class="rating">4.9 · 3.1 mi</span><button class="select-provider" type="button" aria-pressed="false">Choose clinician</button></article>
+          </div>
+          <p class="message" id="search-status" role="status" aria-live="polite"></p>
+        </section>
+        <aside class="right" aria-label="Choose an appointment time">
+          <div><div class="eyebrow">Booking details</div><h3 class="selected-name" id="selected-name">Dr. Lila Anand</h3><div class="subtle" id="selected-specialty">Primary care · Family medicine</div><div class="calendar"><h3>Choose a day</h3><div class="week" role="group" aria-label="Available dates"><button class="date" type="button" aria-pressed="true" data-date="Tue, Oct 6"><span>Tue</span><b>06</b></button><button class="date" type="button" aria-pressed="false" data-date="Wed, Oct 7"><span>Wed</span><b>07</b></button><button class="date" type="button" aria-pressed="false" data-date="Thu, Oct 8"><span>Thu</span><b>08</b></button><button class="date" type="button" aria-pressed="false" data-date="Fri, Oct 9"><span>Fri</span><b>09</b></button></div></div></div>
+          <div><h3>Available times</h3><div class="slots" role="group" aria-label="Appointment time slots"><button class="slot" type="button" aria-pressed="false">9:30 am</button><button class="slot" type="button" aria-pressed="false">10:15 am</button><button class="slot" type="button" aria-pressed="false">1:00 pm</button><button class="slot" type="button" aria-pressed="false">2:45 pm</button></div><button class="primary book" id="book-button" type="button" disabled>Choose a time</button><p class="hint">You can review the visit before confirming.</p><p class="message" id="booking-status" role="status" aria-live="polite"></p></div>
+        </aside>
+      </div>
+    </section>
+    <section class="case" aria-labelledby="case-title">
+      <div class="case-head"><div><div class="eyebrow">The design study</div><h2 id="case-title">Less searching. More knowing.</h2></div><div><p><strong>The problem.</strong> Appointment search often makes people translate between provider directories, availability calendars, and unclear next steps. Daywell explores a calmer flow that keeps clinician fit and appointment timing in the same view.</p><p><strong>The goal.</strong> Help a patient decide with confidence, keep important context visible, and make every control understandable on a small screen or with a keyboard.</p></div></div>
+      <div class="case-grid">
+        <article><div class="eyebrow">01 · My role</div><h3>One focused prototype</h3><p>Independent personal project. I set the visual direction, mapped the scheduling flow, wrote the interface content, and built the responsive HTML, CSS, and JavaScript prototype. Provider names, ratings, and availability are illustrative sample data.</p></article>
+        <article><div class="eyebrow">02 · Design reasoning</div><h3>Compare before committing</h3><p>The provider list and time picker stay together on wide screens so patients can compare fit and availability without losing their place. On narrow screens the experience becomes a clear vertical sequence.</p></article>
+        <article><div class="eyebrow">03 · Typography + color</div><h3>Warm, steady, readable</h3><p>DM Sans carries interface labels and supporting text; DM Serif Display adds a human editorial note to the case story. Warm paper, deep forest green, soft mint, and a restrained coral state color keep hierarchy clear.</p><div class="tokens"><span class="token">#F4F3ED PAPER</span><span class="token">#315F4B ACTION</span><span class="token">#D8E8D9 SELECTED</span><span class="token">#D86E55 FOCUS</span></div></article>
+        <article><div class="eyebrow">04 · Components</div><h3>Small set, clear states</h3><p>Clinician rows, specialty filters, date choices, time buttons, selected states, and a confirmation status message use consistent spacing and explicit feedback. The booking action stays disabled until a time is selected.</p></article>
+        <article><div class="eyebrow">05 · UX + accessibility</div><h3>Make state visible</h3><p>Native buttons and form controls support keyboard use. Filter and date choices expose pressed state, messages announce changes, focus has a strong outline, labels are explicit, and reduced-motion preferences are respected.</p></article>
+        <article><div class="eyebrow">06 · Implementation</div><h3>Progressive, responsive UI</h3><p>Built as a self-contained HTML page with semantic landmarks, CSS Grid and Flexbox, a small vanilla JavaScript state model, and no external runtime dependency. The booking confirmation is a local prototype state; it does not transmit health information.</p></article>
+      </div>
+    </section>
+    <footer class="footer"><span><strong>Daywell</strong> · Independent healthcare UX concept · 2026</span><a class="return" href="https://ajaysimha0107.github.io/ajay-simha-design-engineer-portfolio/">Return to Ajay’s portfolio ↗</a></footer>
+  </main>
+  <script>
+    (function(){
+      const providers=Array.from(document.querySelectorAll(".provider"));
+      const searchInput=document.getElementById("care-search");
+      const searchStatus=document.getElementById("search-status");
+      let specialty="all",selectedDate="Tue, Oct 6",selectedTime="",selectedProvider=providers[0];
+      function applyFilters(){
+        const q=searchInput.value.trim().toLowerCase();let shown=0;
+        providers.forEach(function(card){
+          const matchSpecialty=specialty==="all"||card.dataset.specialty===specialty;
+          const matchQuery=!q||card.innerText.toLowerCase().includes(q);
+          card.hidden=!(matchSpecialty&&matchQuery);if(!card.hidden)shown++;
+        });
+        searchStatus.textContent=shown===0?"No clinicians match that search. Try another name or specialty.":(q||specialty!=="all"?shown+" clinician"+(shown===1?"":"s")+" shown.":"");
+      }
+      document.querySelectorAll("[data-filter]").forEach(function(button){button.addEventListener("click",function(){
+        specialty=button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(function(other){other.setAttribute("aria-pressed",String(other===button));});
+        applyFilters();
+      });});
+      document.getElementById("search-form").addEventListener("submit",function(e){e.preventDefault();applyFilters();});
+      searchInput.addEventListener("input",applyFilters);
+      providers.forEach(function(card){card.querySelector(".select-provider").addEventListener("click",function(){
+        selectedProvider=card;providers.forEach(function(other){other.classList.toggle("selected",other===card);const b=other.querySelector(".select-provider");b.setAttribute("aria-pressed",String(other===card));b.textContent=other===card?"Selected clinician":"Choose clinician";});
+        selectedTime="";document.querySelectorAll(".slot").forEach(function(slot){slot.setAttribute("aria-pressed","false");});const book=document.getElementById("book-button");book.disabled=true;book.textContent="Choose a time";delete book.dataset.confirmed;
+        document.getElementById("selected-name").textContent="Dr. "+card.dataset.provider;
+        document.getElementById("selected-specialty").textContent=card.dataset.specialty+" · Visit";
+        document.getElementById("booking-status").textContent="";
+      });});
+      document.querySelectorAll(".date").forEach(function(button){button.addEventListener("click",function(){
+        selectedDate=button.dataset.date;document.querySelectorAll(".date").forEach(function(other){other.setAttribute("aria-pressed",String(other===button));});
+        selectedTime="";document.querySelectorAll(".slot").forEach(function(slot){slot.setAttribute("aria-pressed","false");});const book=document.getElementById("book-button");book.disabled=true;book.textContent="Choose a time";delete book.dataset.confirmed;
+        document.getElementById("booking-status").textContent="Showing openings for "+selectedDate+".";
+      });});
+      document.querySelectorAll(".slot").forEach(function(button){button.addEventListener("click",function(){
+        selectedTime=button.textContent.trim();document.querySelectorAll(".slot").forEach(function(other){other.setAttribute("aria-pressed",String(other===button));});
+        const book=document.getElementById("book-button");book.disabled=false;book.textContent="Review appointment";delete book.dataset.confirmed;document.getElementById("booking-status").textContent=selectedTime+" selected for "+selectedDate+".";
+      });});
+      document.getElementById("book-button").addEventListener("click",function(){
+        if(!selectedTime)return;
+        const status=document.getElementById("booking-status");
+        if(this.dataset.confirmed==="true"){status.textContent="Your concept visit with Dr. "+selectedProvider.dataset.provider+" is confirmed for "+selectedDate+" at "+selectedTime+".";this.textContent="Appointment confirmed";return;}
+        status.textContent="Review: Dr. "+selectedProvider.dataset.provider+" · "+selectedDate+" · "+selectedTime+". Select again to confirm this concept booking.";
+        this.textContent="Confirm this visit";this.dataset.confirmed="true";
+      });
+      document.querySelectorAll("[data-demo-nav]").forEach(function(button){button.addEventListener("click",function(){document.getElementById("booking-status").textContent=button.textContent+" is outside this scheduling prototype. Your current booking choices are still here.";});});
+    })();
+  </script>
+</body>
+</html>
